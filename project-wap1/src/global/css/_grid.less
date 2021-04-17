@@ -1,0 +1,38 @@
+// layout grid
+@layout_maxcols: 12;
+
+.xwRow {
+    width: 100%; box-sizing: border-box; 
+    &:before,
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.xwCol-1 {
+    box-sizing: border-box; float: left;
+}
+.generate-columns(@colIndex) when not (@colIndex = 1) {
+    .xwCol-@{colIndex}:extend(.xwCol-1) {}
+}
+.generate-columns(@colIndex: 1; @maxcols: @layout_maxcols) when (@colIndex <= @maxcols) {
+    .xwCol-@{colIndex} {
+        width: 100% / @maxcols * @colIndex;
+    }
+    .generate-columns(@colIndex + 1);
+}
+.generate-columns();
+
+.generate-offset(@colIndex: 1, @maxcols: @layout_maxcols) when (@colIndex < @maxcols) {
+    .xwCol-offset-@{colIndex} {
+        margin-left: 100% / @maxcols * @colIndex;
+    }
+    .generate-offset(@colIndex + 1);
+}
+.generate-offset();
+
+.xwCol-wrap {
+    clear: left;
+}

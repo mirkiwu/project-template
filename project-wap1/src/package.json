@@ -1,0 +1,13 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "clean": "rmdir /s/q ..\\test & rmdir /s/q ..\\dist",
+    "test": "fis3 release test -c -w",
+    "build": "fis3 release build -c -d ../dist"
+  },
+  "author": "xwtec",
+  "license": ""
+}
