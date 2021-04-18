@@ -1,0 +1,10 @@
+{
+    "activity-wap1": {
+        "desc": "通用wap活动模板1",
+        "path": "activity-wap1"
+    },
+    "project-wap1": {
+        "desc": "中型项目模板，使用fis3作为构建工具，以页面为独立组件",
+        "path": "project-wap1"
+    }
+}
