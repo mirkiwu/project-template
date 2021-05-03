@@ -9,6 +9,112 @@ body {
     position: relative; width: 6.4rem; margin: 0 auto;
 }
 
+// header
+.header {
+    height: 3.3rem;
+}
+.header-userinfo {
+    position: relative; width: 5.6rem; height: .5rem; padding: 0 .4rem; background: rgba(0,0,0,.3); line-height: .5rem; color: #fff;
+    a, em {
+        color: #ff3;
+    }
+    &__right {
+        float: right;
+    }
+}
+
+// login
+.login-form {
+    &__row {
+        width: 5rem; margin: 0 auto .2rem;
+        &:after {
+            content: ""; display: block; clear: both;
+        }
+    }
+    &__col-user,
+    &__col-psw,
+    &__col-sm,
+    &__col-chk {
+        float: left; width: 4.2rem; height: .8rem; border: 1px solid #ddd; padding-left: .8rem; background: #eee url(../img/login-form-ico1.png) .15rem .15rem no-repeat; background-size: .5rem .5rem;
+        input {
+            display: block; float: right; background: #fff; border: none; box-sizing: border-box; padding: 0 .1rem; width: 4.2rem; height: .8rem; line-height: .8rem; font-size: .32rem;
+            &::placeholder {
+                font-size: .28rem;
+            }
+        }
+    }
+    &__col-psw,
+    &__col-sm {
+        background-image: url(../img/login-form-ico2.png);
+    }
+    &__col-sm,
+    &__col-chk {
+        width: 2.8rem;
+        input {
+            width: 2.8rem;
+        }
+    }
+    &__col-chk {
+        background-image: url(../img/login-form-ico3.png);
+    }
+    &__col-send,
+    &__col-chkimg {
+        display: block; float: right; width: 1.2rem; height: .8rem; text-align: center; line-height: .4rem; color: #fff; background: #69c; border-radius: .06rem;
+    }
+    &__col-chkimg {
+        img {
+            display: block; width: 100%; height: 100%;
+        }
+    }
+
+    &__errMsg {
+        text-align: center; color: red;
+    }
+    &__tip {
+        text-align: center; margin-bottom: .2rem;
+        a {
+            color: #369; text-decoration: underline;
+        }
+    }
+    &__btn {
+        display: block; margin: 0 auto; width: 5rem; height: .8rem; background: #69c; line-height: .8rem; color: #fff; text-align: center; font-size: .32rem; border-radius: .06rem;
+    }
+}
+
+.login-type-psw,
+.login-type-sm {
+    display: none;
+}
+.login-type-psw:checked ~ .login-form {
+    .login-form__row-sm,
+    .login-form__label-psw {
+        display: none;
+    }
+}
+.login-type-sm:checked ~ .login-form {
+    .login-form__row-psw,
+    .login-form__label-sm {
+        display: none;
+    }
+}
+
+
+
+ // popup-normal 
+.popup-normal {
+    &__head {
+        background: #336699;
+    }
+    &__content {
+        background: #fff; padding: .2rem;
+    }
+    &__close {
+        float: right; display: block; width: .6rem; height: .6rem; text-align: center; line-height: .6rem; color: #fff;
+    }
+    &__title {
+        margin: 0 .6rem; text-align: center; line-height: .6rem; font-size: .28rem; color: #fff;
+    }
+}
 
 // popup-help
 .popup-help {

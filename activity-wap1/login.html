@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit"> 
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <title>Document</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="act-tag" content="">
+    <meta name="act-img" content="">
+    <script>
+    /*rem适配*/
+    (function (deviceWidth){
+        var root = document.documentElement;
+        var w = root.clientWidth;
+        root.style.fontSize = (w > 720 ? 720 : w < 320 ? 320 : w) / deviceWidth * 100 + "px";
+    })(640);
+    </script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<!-- container -->
+<div class="container" id="container">
+    <!-- header -->
+    <div class="header" id="header"></div>
+    <!-- //header -->
+    <!-- main -->
+    <div class="main main-login" id="main">
+        <form autocomplete="off">
+        <input type="radio" name="login-type" id="login-type-psw" class="login-type-psw" value="password" checked>
+        <input type="radio" name="login-type" id="login-type-sm" class="login-type-sm" value="shortmessage">
+        <div class="login-form">
+            <div class="login-form__row">
+                <div class="login-form__col-user"><input type="tel" maxlength="11" name="login-tel" placeholder="请输入11位手机号码"></div>
+            </div>
+            <div class="login-form__row login-form__row-psw">
+                <div class="login-form__col-psw"><input type="password" maxlength="6" name="login-psw" placeholder="请输入6位服务密码"></div>
+            </div>
+            <div class="login-form__row login-form__row-sm">
+                <div class="login-form__col-sm"><input type="tel" maxlength="6" name="login-sm" placeholder="请输入短信密码"></div>
+                <span class="login-form__col-send" onclick="javascript:;">发送<br>短信密码</span>
+                <!-- <span class="login-form__col-send is-dis">已发送<br>(59s)</span> -->
+            </div>
+            <div class="login-form__row">
+                <label for="login-type-psw" class="login-form__label-psw">使用服务密码登录</label>
+                <label for="login-type-sm" class="login-form__label-sm">忘记密码？试试短信密码</label>
+            </div>
+            <div class="login-form__row">
+                <div class="login-form__col-chk"><input type="tel" maxlength="4" name="login-chk" placeholder="请输入验证码"></div>
+                <span class="login-form__col-chkimg"><img src="http://wap.js.10086.cn/imageVerifyCode.do" onclick="javascript:this.src='http://wap.js.10086.cn/imageVerifyCode.do?t='+Math.random()"></span>
+            </div>
+            <p class="login-form__errMsg"></p>
+            <p class="login-form__tip"><a href="">还没有江苏移动号码，点击此处&gt;&gt;&gt;</a></p>
+            <span class="login-form__btn" onclick="javascript:;">登 录</span>
+        </div>
+        </form>
+    </div>
+    <!-- //main -->
+</div>
+<!-- //container -->
+
+</body>
+</html>
