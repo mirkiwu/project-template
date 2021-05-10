@@ -1,7 +1,11 @@
 {
     "activity-wap1": {
-        "desc": "通用wap活动模板1",
+        "desc": "通用wap活动模板，带登录页，弹框js，用户信息",
         "path": "activity-wap1"
+    },
+    "activity-wap1": {
+        "desc": "纯静态wap活动模板，无登录、弹框、用户信息",
+        "path": "activity-wap2"
     },
     "project-wap1": {
         "desc": "中型项目模板，使用fis3作为构建工具，以页面为独立组件",
